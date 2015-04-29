@@ -39,7 +39,7 @@ for meth in methods:
 
     plt.subplot(121),plt.imshow(res,cmap = 'gray')
     plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-    plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    plt.subplot(122),plt.imshow(img)
     plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
     plt.suptitle(meth)
     
@@ -49,3 +49,7 @@ for meth in methods:
 
     plt.show()
 
+<<<<<<< HEAD
+=======
+    plt.show()
+>>>>>>> origin/master
