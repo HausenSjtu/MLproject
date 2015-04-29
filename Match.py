@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+import time
 
 img = cv2.imread('ml2.jpg',0)
 img2 = img.copy()
@@ -10,6 +11,10 @@ w, h = template.shape[::-1]
 # All the 6 methods for comparison in a list
 methods = [ 'cv2.TM_CCOEFF_NORMED']
             #'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+
+tb = time.clock()
+print tb
+
 
 for meth in methods:
     img = img2.copy()
@@ -37,5 +42,10 @@ for meth in methods:
     plt.subplot(122),plt.imshow(img,cmap = 'gray')
     plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
     plt.suptitle(meth)
+    
+    te = time.clock()
+    print te
+
 
     plt.show()
+
